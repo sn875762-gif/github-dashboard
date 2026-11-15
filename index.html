@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GitHub Dashboard · sn875762-gif</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1020;--panel:#111a2e;--panel2:#151f36;--line:#26334d;--muted:#93a1b8;--text:#edf2ff;--accent:#8b7cff;--cyan:#55d6c2;--pink:#f08bc5;--shadow:0 18px 45px #02061766}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(900px 500px at 80% -10%,#29245b66,transparent 60%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:inherit;text-decoration:none}.app{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}
+aside{border-right:1px solid var(--line);padding:28px 18px;background:#0b1222cc}.brand{display:flex;align-items:center;gap:11px;font-weight:750;font-size:17px;margin:0 8px 38px}.mark{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--cyan));display:grid;place-items:center;color:#07101d;font-size:19px}
+.navlabel{color:#64748b;font-size:10px;letter-spacing:.16em;font-weight:800;margin:25px 10px 9px}.nav a{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:10px;color:#aab6cc;margin:3px 0}.nav a.active,.nav a:hover{background:#202b48;color:white}.nav .ico{width:19px;text-align:center;font-size:16px}.sideuser{position:absolute;bottom:22px;display:flex;align-items:center;gap:10px;padding:10px}.avatar{width:36px;height:36px;border-radius:50%;background:#26334d;object-fit:cover}.sideuser small{display:block;color:var(--muted)}
+main{padding:30px clamp(18px,4vw,54px) 50px;max-width:1500px;width:100%;margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:30px}.eyebrow{color:var(--cyan);font-size:11px;letter-spacing:.17em;text-transform:uppercase;font-weight:800}.top h1{font-size:clamp(25px,3vw,34px);margin:5px 0 0;letter-spacing:-.04em}.actions{display:flex;gap:10px;align-items:center}.btn{border:1px solid var(--line);background:#141e33;color:var(--text);border-radius:10px;padding:10px 14px;cursor:pointer;font-weight:650}.btn:hover{border-color:var(--accent)}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}
+.profile{display:flex;align-items:center;gap:18px;padding:22px;background:linear-gradient(110deg,#171f3b,#111a2e 65%);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);margin-bottom:20px}.profile .avatar{width:76px;height:76px;border:3px solid #ffffff18}.pinfo{min-width:0;flex:1}.pinfo h2{margin:0;font-size:21px}.handle{color:var(--muted)}.bio{margin:7px 0 0;color:#c5cee0}.pmeta{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;color:var(--muted);font-size:12px}.pmeta span{white-space:nowrap}.profilelink{border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:13px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}.stat,.panel{background:var(--panel);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow)}.stat{padding:18px}.stathead{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.staticon{font-size:17px}.stat strong{display:block;font-size:27px;letter-spacing:-.04em;margin-top:12px}.stat small{color:#71809b}
+.content{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(270px,.9fr);gap:16px}.panel{padding:20px;margin-bottom:16px}.panelhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.panel h3{font-size:15px;margin:0}.muted{color:var(--muted);font-size:12px}.repo-tools{display:flex;gap:8px;flex-wrap:wrap}.search,select{background:#0b1426;border:1px solid var(--line);border-radius:9px;color:var(--text);padding:9px 11px;outline:none}.search{min-width:170px}.repo{padding:15px 0;border-top:1px solid #202d45}.repo:first-child{border-top:0}.repo-title{color:#b5aaff;font-weight:750}.repo-title:hover{text-decoration:underline}.repo p{margin:6px 0 10px;color:#a8b4ca;font-size:13px}.tags{display:flex;gap:13px;flex-wrap:wrap;color:var(--muted);font-size:11px}.langdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;background:var(--cyan)}
+.langrow{display:grid;grid-template-columns:92px 1fr 38px;align-items:center;gap:10px;margin:14px 0;font-size:12px}.bar{height:8px;background:#26334d;border-radius:10px;overflow:hidden}.bar i{height:100%;display:block;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--cyan))}
+.quick{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quick a{padding:13px;border-radius:11px;background:var(--panel2);border:1px solid var(--line);font-size:12px}.quick a:hover{border-color:var(--accent)}.quick b{display:block;font-size:14px;margin-bottom:3px}
+.notice{border:1px solid #725f2d;background:#342b17;color:#f4d995;padding:12px 14px;border-radius:10px;font-size:12px;margin:14px 0}.status{color:var(--muted);font-size:12px}.empty{padding:28px;text-align:center;color:var(--muted)}.footer{text-align:center;color:#64748b;font-size:11px;padding:18px}
+@media(max-width:1000px){.app{grid-template-columns:205px 1fr}.grid{grid-template-columns:repeat(2,1fr)}.content{grid-template-columns:1fr}}
+@media(max-width:650px){.app{display:block}aside{position:static;border-right:0;border-bottom:1px solid var(--line);padding:13px 16px}.brand{margin:0}.nav{display:flex;overflow:auto;margin-top:12px}.navlabel,.nav a:not(.active){display:none}.nav a{white-space:nowrap;padding:8px 11px}.sideuser{display:none}main{padding:22px 15px}.top{align-items:flex-start}.actions{flex-direction:column}.profile{align-items:flex-start;flex-wrap:wrap}.profilelink{margin-left:94px}.grid{gap:9px}.stat{padding:14px}.stat strong{font-size:23px}.panel{padding:15px}.search{min-width:130px;flex:1}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside>
+  <div class="brand"><div class="mark">⌘</div> GitHub Overview</div>
+  <div class="navlabel">WORKSPACE</div>
+  <nav class="nav">
+    <a class="active" href="#overview"><span class="ico">▦</span> Overview</a>
+    <a href="#repositories"><span class="ico">▤</span> Repositories</a>
+    <a href="#languages"><span class="ico">◉</span> Languages</a>
+    <a href="https://github.com/sn875762-gif" target="_blank" rel="noreferrer"><span class="ico">↗</span> GitHub profile</a>
+  </nav>
+  <div class="navlabel">SHORTCUTS</div>
+  <nav class="nav">
+    <a href="https://github.com/sn875762-gif?tab=stars" target="_blank" rel="noreferrer"><span class="ico">☆</span> Starred</a>
+    <a href="https://github.com/sn875762-gif?tab=projects" target="_blank" rel="noreferrer"><span class="ico">▧</span> Projects</a>
+    <a href="https://github.com/sn875762-gif?tab=followers" target="_blank" rel="noreferrer"><span class="ico">♧</span> Followers</a>
+  </nav>
+  <div class="sideuser"><img class="avatar" id="sideAvatar" alt=""><div><b>sn875762-gif</b><small>GitHub account</small></div></div>
+</aside>
+<main id="overview">
+  <header class="top"><div><div class="eyebrow">DEVELOPER WORKSPACE</div><h1>Good to see you, Sabari 👋</h1><div class="status" id="updated">Loading your public GitHub data…</div></div><div class="actions"><button class="btn" id="refresh">↻ Refresh</button><a class="btn primary" href="https://github.com/sn875762-gif" target="_blank" rel="noreferrer">Open GitHub ↗</a></div></header>
+  <section class="profile">
+    <img class="avatar" id="avatar" alt="GitHub avatar">
+    <div class="pinfo"><h2 id="name">sn875762-gif</h2><div class="handle">@sn875762-gif</div><p class="bio" id="bio">Your GitHub workspace at a glance.</p><div class="pmeta"><span id="location">⌖ Public profile</span><span id="joined">◷ Member</span><span id="website"></span></div></div>
+    <a class="profilelink" href="https://github.com/sn875762-gif" target="_blank" rel="noreferrer">View profile ↗</a>
+  </section>
+  <div class="grid">
+    <div class="stat"><div class="stathead">Public repositories <span class="staticon">▤</span></div><strong id="reposCount">—</strong><small>Visible projects</small></div>
+    <div class="stat"><div class="stathead">Followers <span class="staticon">♧</span></div><strong id="followers">—</strong><small>People following you</small></div>
+    <div class="stat"><div class="stathead">Following <span class="staticon">◎</span></div><strong id="following">—</strong><small>Accounts you follow</small></div>
+    <div class="stat"><div class="stathead">Stars earned <span class="staticon">☆</span></div><strong id="stars">—</strong><small>Across fetched public repos</small></div>
+  </div>
+  <div class="content">
+    <div>
+      <section class="panel" id="repositories">
+        <div class="panelhead"><div><h3>Your repositories</h3><div class="muted" id="repoCountLabel">Latest updated public repositories</div></div><div class="repo-tools"><input class="search" id="filter" placeholder="Search repos…" aria-label="Search repositories"><select id="sort" aria-label="Sort repositories"><option value="updated">Recently updated</option><option value="stars">Most stars</option><option value="forks">Most forks</option><option value="name">Name A–Z</option></select></div></div>
+        <div id="repoList"><div class="empty">Connecting to GitHub…</div></div>
+      </section>
+    </div>
+    <div>
+      <section class="panel" id="languages"><div class="panelhead"><h3>Language mix</h3><span class="muted">By repository count</span></div><div id="languageList"><div class="empty">Waiting for repository data…</div></div></section>
+      <section class="panel"><div class="panelhead"><h3>Quick access</h3></div><div class="quick">
+        <a href="https://github.com/sn875762-gif?tab=repositories" target="_blank" rel="noreferrer"><b>All repositories ↗</b><span class="muted">Browse your projects</span></a>
+        <a href="https://github.com/sn875762-gif?tab=activity" target="_blank" rel="noreferrer"><b>Activity ↗</b><span class="muted">Recent public activity</span></a>
+        <a href="https://github.com/sn875762-gif?tab=stars" target="_blank" rel="noreferrer"><b>Starred ↗</b><span class="muted">Saved repositories</span></a>
+        <a href="https://github.com/settings/profile" target="_blank" rel="noreferrer"><b>Edit profile ↗</b><span class="muted">Update your profile</span></a>
+      </div></section>
+      <div class="notice">Public-data dashboard: private repositories and private activity are not included. GitHub may rate-limit unauthenticated requests.</div>
+    </div>
+  </div>
+  <div class="footer">Built for <b>sn875762-gif</b> · Data from the GitHub public API</div>
+</main>
+</div>
+<script>
+const USER='sn875762-gif', API='https://api.github.com';
+let repos=[];
+const $=id=>document.getElementById(id);
+const fmt=n=>Number(n||0).toLocaleString();
+const date=s=>s?new Date(s).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}):'';
+function safe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+async function load(){
+ $('updated').textContent='Refreshing public GitHub data…';$('repoList').innerHTML='<div class="empty">Loading repositories…</div>';
+ try{
+  const headers={'Accept':'application/vnd.github+json'};
+  const [u,r]=await Promise.all([
+   fetch(`${API}/users/${USER}`,{headers}),
+   fetch(`${API}/users/${USER}/repos?per_page=100&sort=updated`,{headers})
+  ]);
+  if(u.status===404)throw Error('GitHub user not found. Check the username.');
+  if(u.status===403||r.status===403)throw Error('GitHub API rate limit reached. Please wait a little and refresh.');
+  if(!u.ok||!r.ok)throw Error('GitHub could not return profile data right now.');
+  const user=await u.json();repos=await r.json();
+  $('avatar').src=user.avatar_url;$('sideAvatar').src=user.avatar_url;
+  $('name').textContent=user.name||USER;$('bio').textContent=user.bio||'No public bio added yet.';
+  $('location').textContent=user.location?'⌖ '+user.location:'⌖ Public profile';
+  $('joined').textContent='◷ Joined '+date(user.created_at);
+  $('website').innerHTML=user.blog?`↗ <a href="${safe(user.blog.startsWith('http')?user.blog:'https://'+user.blog)}" target="_blank" rel="noreferrer">${safe(user.blog)}</a>`:'';
+  $('reposCount').textContent=fmt(user.public_repos);$('followers').textContent=fmt(user.followers);$('following').textContent=fmt(user.following);
+  $('stars').textContent=fmt(repos.reduce((a,x)=>a+x.stargazers_count,0));
+  $('updated').textContent='Updated '+new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})+' · Live public data';
+  $('repoCountLabel').textContent=`${repos.length} public repositories fetched`;
+  renderRepos();renderLanguages();
+ }catch(e){$('updated').textContent='Could not load GitHub data';$('repoList').innerHTML=`<div class="empty">${safe(e.message)}<br><br><button class="btn" onclick="load()">Try again</button></div>`;$('languageList').innerHTML='<div class="empty">Language data unavailable.</div>';}
+}
+function renderRepos(){
+ const q=$('filter').value.toLowerCase(),sort=$('sort').value;
+ let list=repos.filter(r=>(r.name+' '+(r.description||'')).toLowerCase().includes(q));
+ list.sort((a,b)=>sort==='stars'?b.stargazers_count-a.stargazers_count:sort==='forks'?b.forks_count-a.forks_count:sort==='name'?a.name.localeCompare(b.name):new Date(b.updated_at)-new Date(a.updated_at));
+ $('repoList').innerHTML=list.length?list.slice(0,12).map(r=>`<article class="repo"><a class="repo-title" href="${r.html_url}" target="_blank" rel="noreferrer">${safe(r.name)} ↗</a>${r.fork?'<span class="muted"> · fork</span>':''}<p>${safe(r.description||'No description provided.')}</p><div class="tags"><span><i class="langdot"></i>${safe(r.language||'No language')}</span><span>☆ ${fmt(r.stargazers_count)}</span><span>⑂ ${fmt(r.forks_count)}</span><span>Updated ${date(r.updated_at)}</span></div></article>`).join(''):'<div class="empty">No repositories match your search.</div>';
+}
+function renderLanguages(){
+ const counts={};repos.forEach(r=>{if(r.language)counts[r.language]=(counts[r.language]||0)+1});
+ const entries=Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,7),total=entries.reduce((s,x)=>s+x[1],0);
+ $('languageList').innerHTML=entries.length?entries.map(([name,n])=>`<div class="langrow"><span>${safe(name)}</span><div class="bar"><i style="width:${Math.round(n/total*100)}%"></i></div><span class="muted">${Math.round(n/total*100)}%</span></div>`).join(''):'<div class="empty">No language data in public repositories yet.</div>';
+}
+$('refresh').addEventListener('click',load);$('filter').addEventListener('input',renderRepos);$('sort').addEventListener('change',renderRepos);load();
+</script>
+</body></html>
